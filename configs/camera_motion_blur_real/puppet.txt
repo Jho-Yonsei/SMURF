@@ -1,0 +1,42 @@
+
+dataset_name = llff
+datadir = ./data/real_camera_motion_blur/blurpuppet/
+expname = puppet
+basedir = ./work_dir/camera_motion_blur_real/
+
+hold_every = 6
+downsample_train = 4.0
+ndc_ray = 1
+
+n_iters = 40000
+batch_size = 4096
+
+N_voxel_init = 2097156 # 128**3
+N_voxel_final = 110592000 # 480**3
+
+upsamp_list = [2000,3000,4000,5500]
+update_AlphaMask_list = [2500]
+
+N_vis = -1 # vis all testing images
+vis_every = 10000
+
+render_test = 1
+render_path = 1
+
+n_lamb_sigma = [24,6,6]
+n_lamb_sh = [64,16,16]
+
+shadingMode = MLP_Fea
+fea2denseAct = relu
+
+view_pe = 0
+fea_pe = 0
+
+TV_weight_density = 1.0
+TV_weight_app = 1.0
+
+tonemapping = learn
+
+rm_near_plane = 30
+focuspoint_scale = 0.7
+radius_scale = 1.2
