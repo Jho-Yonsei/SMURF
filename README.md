@@ -54,7 +54,22 @@ If you want to train ```girl``` scene from real-world dataset on GPU 1:
 python3 train.py --config ./configs/camera_motion_blur_real/girl.txt --device 1
 ```
 
+## Training Options
+
+You can adjust the hyperparameters to conduct ablative experiments:
+
+```--num_warp {N}``` : number of warped rays (Default: ```8```)
+
+```--chrono_view False``` : only with time embedding (Default: ```True```)
+
+```--res_momentum False``` : deactivate residual momentum (Default: ```True```)
+
 # How to Evaluate
+If you have trained for ```factory``` scene and want to render the test images and spiral video:
+```
+python3 train.py --config ./configs/camera_motion_blur_synthetic/factory.txt --device 0 --ckpt ./work_dir/camera_motion_blur_synthetic/factory/factory.th --render_only 1
+```
+
 
 # Pretrained Weights
 To be released.
@@ -72,6 +87,9 @@ Please cite this work if you find it useful:
 
 
 ## Acknowledgements
+This repo is based on [TensoRF](https://github.com/apchenstu/TensoRF), [Deblur-NeRF](https://github.com/limacv/Deblur-NeRF), and our work is hugely influenced by [Neural-ODE](https://github.com/rtqichen/torchdiffeq).
+
+Thanks to the original authors for their awesome works!
 
 ## **TODO**
 
