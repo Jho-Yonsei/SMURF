@@ -6,22 +6,29 @@ Official Implementation of [SMURF: Continuous Dynamics for Motion-Deblurring Rad
 ![image](figures/overview.png)
 
 # Environment Setup
+
+1. Create conda environment
 ```
-# 1. Create conda environment
 conda create -n smurf python=3.8
-
-# 2. Activate environment
+```
+2. Activate environment
+```
 conda activate smurf
+```
 
-# 3. Clone the repository
+3. Clone the repository
+```
 git clone https://github.com/Jho-Yonsei/SMURF.git
 cd SMURF
-
-# 4. Install packages
+```
+4. Install packages
+```
 pip3 install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
 pip3 install -r requirements.txt
+```
 
-# 5. Check where your environment path is ($ conda env list), and copy the files in "for_chrono_view_embedding" directory to "torchdiffeq" package
+5. Check where your environment path is (```$ conda env list```), and copy the files in ```for_chrono_view_embedding``` directory to ```torchdiffeq``` package
+```
 cp ./for_chrono_view_embedding/* {environment_path}/lib/python3.8/site-packages/torchdiffeq/_impl/
 ```
 
