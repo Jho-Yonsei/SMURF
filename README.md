@@ -3,4 +3,5 @@ Official Implementation of [SMURF: Continuous Dynamics for Motion-Deblurring Rad
 
 ## **TODO**
 
-- [ ] Release source code.
+- [x] Release source code.
+- [ ] Update README file.
