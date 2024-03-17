@@ -101,5 +101,5 @@ Thanks to the original authors for their awesome works!
 ## **TODO**
 
 - [x] Release source code.
-- [ ] Update README file.
+- [x] Update README file.
 - [ ] Upload pretrained weights.
